@@ -1,0 +1,12 @@
+1. What changes I have to make to my scanner/parser since the previous version my turned in:
+	在parser.y裡面設定union(當作terminal/ nonterminal的type使用)，並給每個terminal/ nonterminal type, 並將extern FILE *yyin與 extern int yylex(void)改成extern "C" FILE *yyin與extern "C" int yylex(void)。 在lex.l裡面設定當每個terminal是特定type時要給甚麼值，並在前面加上extern "C" int yylex()。
+	在parser.y裡面，在要建立symbol table, 丟東西進入symbol table，或是某些需要用到C++的地方加上大括號並填入C++程式
+
+2. The abilities of my parser
+	此parser可以將讀到的變數、id傳進symbol table裡面，並做出是否重複宣告的判斷，然後如果那個scope讀完了會把參數pop出來。
+
+3. The platform to run my parser
+	系計中的工作站(在ubuntu裡面開工作站執行)
+
+4. How to run my parser
+	將要跑的步驟寫進Makefile，然後在工作站上打入make即可執行。

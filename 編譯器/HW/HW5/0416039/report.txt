@@ -1,0 +1,8 @@
+1. The change I have to make to my scanner/ parser:
+    先開啟一個.j檔, 然後在parser中相對應的位置在檔案裡寫上適當的java byteCode使之可以編譯
+2. The abilities of my parser:
+    此parer可以對P語言產生java byteCode, 並能通過jasmin編譯執行
+3. The platform to run my parser:
+    工作站
+4. How to run my parser:
+    將要執行的指令寫進makefile裡面, 再在command裡輸入make即可跑出名為parser的執行檔, 然後輸入./parser 要讀的檔案 即可產生.j檔, 然後再透過jasmin執行.
